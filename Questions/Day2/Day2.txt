@@ -1,0 +1,5 @@
+1. Buying Vegetables (GFG) - https://practice.geeksforgeeks.org/problems/buying-vegetables0016/1
+
+2. Different Divisors (Codeforces)- https://codeforces.com/problemset/problem/1474/B
+
+3. Nezzar and Lucky Number (codeforces) - https://codeforces.com/problemset/problem/1478/B
