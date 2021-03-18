@@ -1,0 +1,5 @@
+1. Player with max score (gfg) - https://practice.geeksforgeeks.org/problems/player-with-max-score/1
+
+2. k-LCM (easy version) (Codeforces) - https://codeforces.com/problemset/problem/1497/C1
+
+
