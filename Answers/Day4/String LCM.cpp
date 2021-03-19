@@ -1,0 +1,180 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#ifdef LOCAL
+#define eprintf(...) fprintf(stderr, __VA_ARGS__);fflush(stderr);
+#else
+#define eprintf(...) 42
+#endif
+
+#define endl '\n'
+#define ll int64_t
+#define FOR(i,a,b) for(int i=a;i<b;i++)
+#define FORD(i,a,b) for(int i=a;i>=b;i--)
+#define pb push_back
+#define mp make_pair
+#define all(x) (x).begin(),(x).end()
+#define fi first
+#define se second
+#define pb push_back
+#define ppb pop_back
+#define yyy cout<<"YES\n"
+#define nnn cout<<"NO\n"
+#define FASTER ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0)
+#define T int t;cin >> t;while(t--)
+
+
+const ll MAX = 1e7 + 7;
+const ll mod = 1e9 + 7;
+ll xyp(ll x, ll y) { if (y == 0) return 1LL; if (y == 1) return x; if (y % 2) { ll p = xyp(x, y - 1); return (x * p) % mod; }ll p = xyp(x, y / 2); return (p * p) % mod; }
+ll inv(ll x) { return xyp(x, mod - 2); }
+ll fact[MAX]; void init() { fact[0] = 1; for (ll i = 1; i < MAX; i++) { fact[i] = (fact[i - 1] * i) % mod; } }
+ll ncr(ll n, ll r) { if (r < 0 || n < 0) return 0LL; if (r == 0 || n == r) return 1LL; if (r == 1 || ((n - r) == 1)) return n; ll p = (((fact[n] * inv(fact[r])) % mod) * inv(fact[n - r])) % mod; return p; }
+
+void read_arr(int a[], int n) {
+	FOR(i, 0, n) cin >> a[i];
+}
+
+void write_arr(int a[], int n) {
+
+	FOR(i, 0, n) cout << a[i] << " ";
+	cout << '\n';
+}
+
+
+
+mt19937_64 rng(chrono::steady_clock::now().time_since_epoch().count());
+
+
+
+clock_t startTime;
+double getCurrentTime() {
+	return (double)(clock() - startTime) / CLOCKS_PER_SEC;
+}
+
+
+
+string s, t;
+
+void solve() {
+
+	cin >> s >> t;
+	int n = s.size(), m = t.size();
+
+	map<char, int>mp1, mp2;
+
+	FOR(i, 0, n)
+		mp1[s[i]]++;
+	FOR(i, 0, m)
+		mp2[t[i]]++;
+
+	int fre = mp1[s[0]];
+	bool flag = 1;
+	for (auto itr : mp1) {
+
+		if (!mp2[itr.first]) {
+			cout << -1 << endl;
+			return;
+		}
+	}
+	fre = mp2[t[0]];
+	for (auto itr : mp2) {
+
+		if (!mp1[itr.first]) {
+			cout << -1 << endl;
+			return;
+		}
+	}
+
+	// 	if(!flag){
+		   // if(n>m){
+		   //     for(int i=0;i<n;i+=m){
+		   //         if(s.substr(i,m)!=t){
+		   //             cout<<-1<<endl;
+		   //             return;
+		   //         }
+		   //     }
+		   // }
+		   // else{
+		   //     for(int i=0;i<m;i+=n){
+		   //         if(t.substr(i,n)!=s){
+		   //             cout<<-1<<endl;
+		   //             return;
+		   //         }
+		   //     }
+		   // }
+	// 	}
+
+	// 	if(n<m){
+	// 	    if(t.substr(0,n)!=s){
+	// 	       // cout<<t.substr(0,n)<<"***\n";
+	// 	        cout<<-1<<endl;
+	// 	        return;
+	// 	    }
+	// 	}
+	// 	else{
+	// 	    if(s.substr(0,m)!=t){
+	// 	       // cout<<s.substr(0,m)<<"***\n";
+	// 	        cout<<-1<<endl;
+	// 	        return;
+	// 	    }
+	// 	}
+
+
+	int lcm = (n * m) / __gcd(n, m);
+	string ans = "";
+	if (n > m) {
+
+		FOR(i, 0, lcm / n)
+			ans += s;
+	}
+	else {
+		FOR(i, 0, lcm / m)
+			ans += t;
+	}
+
+
+	if (n < m) {
+		for (int i = 0; i < ans.size(); i += n) {
+			if (ans.substr(i, n) != s) {
+				cout << -1 << endl;
+				return;
+			}
+		}
+	}
+	else if (n == m && s != t) {
+		cout << -1 << endl;
+		return;
+	}
+	else {
+		for (int i = 0; i < ans.size(); i += m) {
+			if (ans.substr(i, m) != t) {
+				cout << -1 << endl;
+				return;
+			}
+		}
+	}
+
+
+	cout << ans << endl;
+
+
+}
+
+
+int main() {
+
+	// startTime = clock();
+	// #ifdef _DEBUG
+	//     freopen("input.txt", "r", stdin);
+	//     //    freopen("output.txt", "w", stdout);
+	// #endif
+	//     // init();
+	T{
+		solve();
+	}
+
+		// =================================== ****************===========================
+
+	// }
+}

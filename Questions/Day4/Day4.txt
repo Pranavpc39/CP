@@ -1,0 +1,6 @@
+1. M-arrays (Codeforces) - https://codeforces.com/problemset/problem/1497/B
+
+2. Replace and Keep Sorted (codeforces) - https://codeforces.com/problemset/problem/1485/B
+
+3. String LCM (codeforces) - https://codeforces.com/problemset/problem/1473/B
+
