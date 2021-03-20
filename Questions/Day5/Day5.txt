@@ -1,0 +1,6 @@
+1. Even-Odd Game (codeforces) - https://codeforces.com/problemset/problem/1472/D
+
+2. Long Jumps (codeforces) - https://codeforces.com/problemset/problem/1472/C
+
+3. Strange List (codeforces) - https://codeforces.com/problemset/problem/1471/B
+
