@@ -1,0 +1,4 @@
+1. Form a palindrome (GFG) - https://practice.geeksforgeeks.org/problems/form-a-palindrome2544/1
+
+2. Number of Words with k maximum distinct vowels(GFG) - https://practice.geeksforgeeks.org/problems/7b9d245852bd8caf8a27d6d3961429f0a2b245f1/0
+
