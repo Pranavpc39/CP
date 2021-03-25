@@ -1,0 +1,4 @@
+1.  Odd Divisor (codeforces) - https://codeforces.com/contest/1475/problem/A
+
+2. Ping-pong (codeforces) - https://codeforces.com/problemset/problem/1455/C
+
